@@ -1,0 +1,39 @@
+:root {
+  --bg: #f4f6fb; --card: #ffffff; --text: #1a2436; --sub: #5d6b82;
+  --accent: #2563d8; --accent-soft: #e3edfc; --border: #e2e8f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1626; --card: #1a2336; --text: #e9edf6; --sub: #93a0b8;
+          --accent: #64a4f4; --accent-soft: #1d3050; --border: #2a3650; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.85; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 64px; }
+header.site { display: flex; align-items: baseline; gap: 14px; margin-bottom: 34px; flex-wrap: wrap; }
+header.site a { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .02em; }
+header.site .sub { color: var(--sub); font-size: .82rem; }
+h1 { font-size: 1.65rem; line-height: 1.4; margin: 0 0 10px; text-wrap: balance; }
+h2 { font-size: 1.12rem; margin: 2.2em 0 .6em; }
+p { margin: .5em 0 1em; }
+a { color: var(--accent); }
+.lead { color: var(--sub); font-size: .95rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 22px 24px; margin: 18px 0; }
+.appcard { display: flex; gap: 18px; align-items: flex-start; text-decoration: none; color: inherit; }
+.appcard:hover h2 { text-decoration: underline; }
+.appcard .icon { width: 64px; height: 64px; border-radius: 15px; flex-shrink: 0;
+  background: linear-gradient(150deg, #2258c9, #55a6f0); display: flex; align-items: center;
+  justify-content: center; color: #fff; font-size: 30px; font-weight: 800; }
+.appcard h2 { margin: 0 0 4px; font-size: 1.15rem; }
+.appcard p { margin: 0; color: var(--sub); font-size: .9rem; }
+.badge { display: inline-block; background: var(--accent-soft); color: var(--accent);
+  font-size: .74rem; font-weight: 600; border-radius: 6px; padding: 2px 9px; margin-top: 8px; }
+.shots { display: flex; gap: 14px; overflow-x: auto; padding: 6px 0 12px; }
+.shots img { width: 240px; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+dt { font-weight: 700; margin-top: 1.2em; }
+dd { margin: 2px 0 0; color: var(--sub); }
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border);
+  color: var(--sub); font-size: .8rem; }
+.btn { display: inline-block; background: var(--accent); color: #fff !important; text-decoration: none;
+  font-weight: 700; border-radius: 10px; padding: 9px 20px; font-size: .92rem; }
