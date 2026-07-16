@@ -3,64 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="今日の小さな行動を円で記録し、積み上げを前向きに振り返るiPhone習慣アプリ、未来貯金。">
-  <title>未来貯金 | 習慣を未来のお金に変える</title>
-  <link rel="stylesheet" href="./style.css?v=3">
+  <meta name="description" content="小さな行動を未来のお金として積み上げ、自分自身に使える時間を意識するiPhone習慣アプリ、未来貯金。">
+  <title>未来貯金 | 未来のお金と、自分に使える時間</title>
+  <link rel="stylesheet" href="./style.css?v=5">
 </head>
 <body>
   <nav class="nav" aria-label="メインナビゲーション">
-    <a class="brand" href="./"><img src="./img/icon.png" alt=""><span>未来貯金</span></a>
+    <a class="brand" href="./">
+      <img src="./img/icon.png" alt="">
+      <span>未来貯金</span>
+    </a>
     <div class="navlinks">
+      <a href="#concept">コンセプト</a>
       <a href="#features">できること</a>
       <a href="./privacy/">プライバシー</a>
       <a href="./support/">サポート</a>
       <a href="../">アプリ一覧</a>
     </div>
+    <span class="nav-status">App Store 近日公開予定</span>
   </nav>
 
   <main>
-    <section class="hero">
-      <img class="hero-icon" src="./img/icon.png" alt="未来貯金のアプリアイコン">
-      <h1>未来貯金</h1>
-      <p class="lead">今日の小さな行動を円で記録し、積み上げを前向きに振り返る。アカウント不要、端末内保存のiPhone習慣アプリです。</p>
-      <span class="store-status">App Store 近日公開予定</span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="system-label">FS-2026 / PERSONAL FUTURE LEDGER</p>
+        <img class="hero-icon" src="./img/icon.png" alt="未来貯金のアプリアイコン">
+        <h1 id="hero-title">未来貯金</h1>
+        <p class="hero-statement">小さな行動を、<br>未来のお金へ。</p>
+        <p class="hero-time">自分自身に使える時間を、<br>意識できる毎日へ。</p>
+        <p class="hero-description">節約、健康、学びの行動をお金として記録し、積み上げを前向きに振り返る。健康寿命と日々の生活時間から、自分に残された自由な時間の目安も見えるようにします。</p>
+        <span class="store-status">App Store 近日公開予定</span>
+      </div>
 
-      <div class="screens" aria-label="未来貯金の画面">
-        <figure><a href="./img/today.png"><img src="./img/today.png" alt="今日の未来貯金とクイック記録画面"></a><figcaption>今日の積み上げとクイック記録</figcaption></figure>
-        <figure><a href="./img/review.png"><img src="./img/review.png" alt="週と月の振り返り画面"></a><figcaption>週・月の振り返り</figcaption></figure>
-        <figure><a href="./img/habits.png"><img src="./img/habits.png" alt="未来貯金の習慣管理画面"></a><figcaption>習慣を自分用に整える</figcaption></figure>
+      <div class="device-stage" aria-label="未来貯金の今日画面と振り返り画面">
+        <figure class="device device-primary">
+          <img src="./img/today.png" alt="未来貯金の今日画面">
+        </figure>
+        <figure class="device device-secondary">
+          <img src="./img/review.png" alt="未来貯金の振り返り画面">
+        </figure>
       </div>
     </section>
 
-    <div class="band" id="features">
-      <section class="section">
-        <h2>積み上げを、見える形に。</h2>
-        <p>節約、健康、学び。自分にとって価値のある行動へ円金額を設定し、同じ習慣を一日に何度でも記録できます。</p>
-        <div class="feature-list">
-          <article class="feature"><h3>1タップで記録</h3><p>今日の画面とウィジェットからすばやく追加。今日何回続けたかも確認できます。</p></article>
-          <article class="feature"><h3>週と月を振り返る</h3><p>棒グラフ、月間カレンダー、選択日の記録から、無理なく続いた行動を見つけられます。</p></article>
-          <article class="feature"><h3>自由に使える時間</h3><p>健康寿命の公表統計と生活時間をもとに、今日と生涯の自由時間を目安として表示します。</p></article>
+    <section class="dual-signal" id="concept" aria-labelledby="concept-title">
+      <div class="section-heading">
+        <p class="system-label">CORE SIGNAL / 01-02</p>
+        <h2 id="concept-title">未来に残る、<br>お金と時間。</h2>
+      </div>
+      <div class="signal-grid">
+        <article class="signal signal-money">
+          <p class="signal-index">01 / FUTURE MONEY</p>
+          <h3>未来のお金</h3>
+          <p class="signal-value">+12,480円</p>
+          <p>我慢した金額ではなく、自分で選んだ行動の価値。今日、今月、これまでの積み上げを同じ基準で確認できます。</p>
+        </article>
+        <article class="signal signal-time">
+          <p class="signal-index">02 / DISPOSABLE TIME</p>
+          <h3>自分に使える時間</h3>
+          <p class="signal-value">今日 3時間30分</p>
+          <p class="lifetime-value">生涯 約11年0か月 / 約96,572時間</p>
+          <p>睡眠、仕事、通勤、食事などを除いた時間を可視化。限りある時間を何に使うか、日々の選択を見直すきっかけにします。</p>
+        </article>
+      </div>
+    </section>
+
+    <div id="features">
+      <section class="story" aria-labelledby="story-record-title">
+        <div class="story-copy">
+          <p class="story-index">01 / 積み上げ</p>
+          <h2 id="story-record-title">行動を、<br>お金として残す。</h2>
+          <p>缶飲料を買わなかった。水筒を持参した。ストレッチをした。勉強を続けた。一つひとつの行動に自分なりの金額を設定し、1タップで記録できます。</p>
+          <ul class="data-list">
+            <li><span>INPUT</span> 同じ習慣を一日に何度でも記録</li>
+            <li><span>VIEW</span> 今日・今月・累計を即時更新</li>
+            <li><span>WIDGET</span> ホーム画面からクイック記録</li>
+          </ul>
         </div>
+        <figure class="story-screen"><img src="./img/today.png" alt="行動をお金として記録する今日画面"></figure>
+      </section>
+
+      <section class="story story-reverse" aria-labelledby="story-time-title">
+        <div class="story-copy">
+          <p class="story-index">02 / 時間</p>
+          <h2 id="story-time-title">自分のための時間を、<br>見失わない。</h2>
+          <p>日本の健康寿命を基準に、睡眠、仕事、通勤、食事などの時間を質問形式で入力。今日と生涯の両方で、自分自身に使える時間の目安を表示します。</p>
+          <p class="story-note">寿命の予測や医療診断ではなく、時間の使い方を振り返るための目安です。</p>
+        </div>
+        <figure class="story-screen"><img src="./img/time.png" alt="今日と生涯の自分に使える時間を表示する画面"></figure>
+      </section>
+
+      <section class="story" aria-labelledby="story-review-title">
+        <div class="story-copy">
+          <p class="story-index">03 / 振り返り</p>
+          <h2 id="story-review-title">続いた日々を、<br>静かに確認する。</h2>
+          <p>週と月の棒グラフ、月間カレンダー、選択日の履歴から積み上げを確認。記録がない日を責めず、小さな前進を見つけられる振り返りを目指しています。</p>
+          <ul class="data-list">
+            <li><span>WEEK</span> 直近の流れを読み取る</li>
+            <li><span>MONTH</span> 月全体の積み上げを確認</li>
+            <li><span>LOCAL</span> 記録と設定は端末内だけに保存</li>
+          </ul>
+        </div>
+        <figure class="story-screen"><img src="./img/review.png" alt="週と月の積み上げを振り返る画面"></figure>
       </section>
     </div>
 
-    <div class="band">
-      <section class="section">
-        <h2>記録は端末の中だけ。</h2>
-        <p>ログインやクラウド同期はありません。習慣、記録、言語設定、自由時間の回答は端末内に保存され、運営者のサーバーへ送信されません。</p>
-      </section>
-    </div>
+    <section class="closing" aria-labelledby="closing-title">
+      <p class="system-label">LOCAL DEVICE / SECURE MODE</p>
+      <h2 id="closing-title">未来を変えるのは、<br>今日の小さな選択。</h2>
+      <p>アカウント登録やクラウド同期はありません。習慣、記録、言語設定、自由時間の回答はすべて端末内に保存されます。</p>
+      <span class="store-status">App Store 近日公開予定</span>
+    </section>
 
-    <div class="band">
-      <section class="section">
-        <div class="notice">表示する金額は行動を振り返るための目安であり、実際の預金残高、収入、投資利益、医療費削減を保証するものではありません。自由時間も統計と自己申告から算出した目安であり、寿命予測や医療診断ではありません。</div>
-      </section>
-    </div>
+    <section class="disclosure" aria-label="表示内容についての注意">
+      <p>表示する金額は行動を振り返るための目安であり、実際の預金残高、収入、投資利益、医療費削減を保証するものではありません。自由時間も統計と自己申告から算出した目安であり、寿命予測や医療診断ではありません。</p>
+    </section>
   </main>
 
   <footer>
+    <div class="footer-brand"><img src="./img/icon.png" alt=""><span>未来貯金</span></div>
     <div class="footer-links"><a href="./privacy/">プライバシーポリシー</a><a href="./support/">サポート</a><a href="mailto:ipmatching@gmail.com">お問い合わせ</a><a href="../">アプリ一覧</a></div>
-    <div>© 2026 未来貯金</div>
+    <div>© 2026 未来貯金 / TERMINAL VERSION 1.0</div>
   </footer>
 </body>
 </html>
