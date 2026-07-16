@@ -22,6 +22,11 @@ a { color: var(--accent); }
   padding: 22px 24px; margin: 18px 0; }
 .appcard { display: flex; gap: 18px; align-items: flex-start; text-decoration: none; color: inherit; }
 .appcard:hover h2 { text-decoration: underline; }
+.appcard-future { border-color: #13bed4; }
+.appcard-future .badge { background: #dff8fb; color: #087b8d; }
+@media (prefers-color-scheme: dark) {
+  .appcard-future .badge { background: #123b43; color: #67e8f9; }
+}
 .appcard .icon { width: 64px; height: 64px; border-radius: 15px; flex-shrink: 0;
   border: 1px solid var(--border); }
 .appcard h2 { margin: 0 0 4px; font-size: 1.15rem; }
