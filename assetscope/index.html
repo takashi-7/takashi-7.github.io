@@ -3,42 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>アセロケ - サポート</title>
-<link rel="stylesheet" href="../style.css">
+<title>アセロケ | 散らばった投資を、ひとつのポートフォリオに</title>
+<meta name="description" content="複数口座の投資信託・株式をまとめて資産配分を見える化。登録はスクショを取り込むだけ。データはすべて端末内のみのiPhoneアプリ。">
+<style>
+:root {
+  --bg: #f4f4f2; --card: #ffffff; --text: #1c1c1e; --sub: #6e6e73;
+  --line: #e3e3e0; --accent: #2563d8; --chip: #ececea;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.9; }
+.nav { max-width: 1060px; margin: 0 auto; padding: 18px 22px 0; }
+.navtop { display: flex; align-items: center; gap: 10px; }
+.navtop img { width: 34px; height: 34px; border-radius: 8px; }
+.navtop .brand { font-weight: 800; font-size: 1.05rem; letter-spacing: .01em; }
+.navlinks { display: flex; gap: 8px 26px; flex-wrap: wrap; padding: 14px 0;
+  border-bottom: 1px solid var(--line); margin-top: 6px; }
+.navlinks a { color: var(--sub); text-decoration: none; font-size: .82rem; }
+.navlinks a:hover { color: var(--text); }
+
+.hero { text-align: center; padding: 72px 22px 20px; }
+.hero .poem { color: var(--sub); font-size: 1.0rem; margin: 0 0 18px; }
+.hero h1 { font-size: clamp(1.7rem, 5.4vw, 2.6rem); font-weight: 800; margin: 0 0 14px;
+  letter-spacing: .01em; text-wrap: balance; }
+.hero h1 .app { color: var(--accent); }
+.hero .tagline { color: var(--sub); font-size: .95rem; margin: 0 0 30px; }
+.cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.cta .store { background: #1c1c1e; color: #fff; border-radius: 12px; padding: 10px 22px;
+  text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1.3;
+  text-align: left; }
+.cta .store small { font-size: .62rem; opacity: .85; }
+.cta .store span { font-weight: 700; font-size: 1.05rem; }
+.cta .ghost { border: 1px solid var(--text); border-radius: 999px; padding: 12px 26px;
+  color: var(--text); text-decoration: none; font-weight: 600; font-size: .92rem;
+  display: inline-flex; align-items: center; }
+.devices { display: flex; justify-content: center; gap: 4vw; flex-wrap: wrap; padding: 0 12px 40px; }
+.devices img { width: min(300px, 42vw); height: auto; }
+
+.features { max-width: 1060px; margin: 40px auto 0; padding: 0 22px 30px; text-align: center; }
+.features .chip { display: inline-block; background: var(--chip); border-radius: 999px;
+  color: var(--sub); font-size: .78rem; font-weight: 600; padding: 5px 16px; }
+.features h2 { font-size: clamp(1.5rem, 4.6vw, 2.1rem); font-weight: 800; margin: 18px 0 10px; }
+.features .sub { color: var(--sub); font-size: .93rem; margin-bottom: 40px; }
+.fcard { background: var(--card); border-radius: 24px; padding: 42px 30px 0; margin: 0 0 26px;
+  text-align: left; overflow: hidden; }
+.fcard .no { color: var(--sub); font-size: .8rem; letter-spacing: .12em; }
+.fcard .no::before { content: ""; display: inline-block; width: 26px; height: 1px;
+  background: var(--sub); vertical-align: middle; margin-right: 10px; }
+.fcard h3 { font-size: 1.5rem; font-weight: 800; margin: 12px 0 10px; }
+.fcard p { color: var(--sub); font-size: .93rem; margin: 0 0 26px; max-width: 34em; }
+.fcard .shot { display: flex; justify-content: center; }
+.fcard .shot img { width: min(320px, 70vw); height: auto; margin-bottom: -80px; }
+.fcard .note { font-size: .78rem; color: var(--sub); opacity: .85; }
+
+.faq { max-width: 720px; margin: 90px auto 0; padding: 0 22px; }
+.faq h2 { font-size: 1.4rem; font-weight: 800; text-align: center; margin-bottom: 24px; }
+.faq details { background: var(--card); border-radius: 14px; padding: 16px 20px; margin-bottom: 12px; }
+.faq summary { font-weight: 700; cursor: pointer; font-size: .95rem; }
+.faq details p { color: var(--sub); font-size: .9rem; margin: 10px 0 2px; }
+
+footer { max-width: 1060px; margin: 70px auto 0; padding: 26px 22px 46px;
+  border-top: 1px solid var(--line); color: var(--sub); font-size: .82rem; }
+footer .links { display: flex; gap: 8px 24px; flex-wrap: wrap; margin-bottom: 14px; }
+footer a { color: var(--sub); }
+</style>
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a href="../">Apps</a><span class="sub">/ アセロケ</span></header>
 
-<img src="./img/icon.png" alt="アセロケのアイコン" style="width:76px;height:76px;border-radius:17px;border:1px solid var(--border);margin-bottom:12px;">
-<h1>アセロケ</h1>
-<p class="lead">複数の口座に分かれた投資信託・株式をまとめて、"本当の資産配分"を見える化するiPhoneアプリです。登録は家計簿アプリのスクリーンショットを取り込むだけ。ログイン不要・口座連携なしで、データはすべて端末内にのみ保存されます。</p>
+<nav class="nav">
+  <div class="navtop">
+    <img src="./img/icon.png" alt="アセロケのアイコン">
+    <span class="brand">アセロケ</span>
+  </div>
+  <div class="navlinks">
+    <a href="#faq">ヘルプ</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="mailto:ipmatching@gmail.com">お問い合わせ</a>
+    <a href="../">つくったアプリ</a>
+  </div>
+</nav>
 
-<div class="shots">
-  <img src="./img/shot1.jpg" alt="ポートフォリオ画面">
-  <img src="./img/shot2.jpg" alt="資産配分画面">
-</div>
+<section class="hero">
+  <p class="poem">新NISAも、特定口座も、iDeCoも。<br>口座ごとにバラバラのままでは、<br>本当の配分は見えてこない。</p>
+  <h1><span class="app">アセロケ</span> でまとめよう。</h1>
+  <p class="tagline">散らばった投資をひとつのポートフォリオに。シンプルな資産配分アプリ。</p>
+  <div class="cta">
+    <a class="store" href="#" onclick="return false" aria-disabled="true"><small>Coming soon on the</small><span>App Store</span></a>
+    <a class="ghost" href="#features">できること</a>
+  </div>
+  <div class="devices">
+    <img src="./img/hero-light.png" alt="アセロケのポートフォリオ画面(ライトモード)">
+    <img src="./img/hero-dark.png" alt="アセロケのポートフォリオ画面(ダークモード)">
+  </div>
+</section>
 
-<h2>よくある質問</h2>
-<dl>
-<dt>データはどこに保存されますか?</dt>
-<dd>すべてお使いの端末の中にのみ保存されます。ログインや口座連携は不要で、入力内容やスクリーンショットが外部に送信されることはありません。</dd>
-<dt>スクリーンショットがうまく読み取れません。</dt>
-<dd>読み取りは完璧ではなく、画像によっては読み取れない・誤って読み取ることがあります。取り込み画面で内容を確認・修正のうえ登録してください。読み取れなかった商品は、検索または手動追加でも登録できます。</dd>
-<dt>機種変更時にデータを引き継げますか?</dt>
-<dd>入力タブの「バックアップ書き出し」でJSONファイルとして保存し、新しい端末の「復元」から読み込んでください。</dd>
-<dt>購入したProを復元したい。</dt>
-<dd>Proの案内画面にある「購入を復元する」をタップしてください。同じApple IDであれば引き継がれます。</dd>
-</dl>
+<section class="features" id="features">
+  <span class="chip">3つの特徴</span>
+  <h2>「見える化」をより簡単に。</h2>
+  <p class="sub">口座連携も、ログインも、いらない。<br>資産配分を知るための3つの機能。</p>
 
-<h2>お問い合わせ</h2>
-<p>ご質問・不具合のご報告はメールでお寄せください。<br>
-<a class="btn" href="mailto:ipmatching@gmail.com">メールで問い合わせる</a></p>
+  <div class="fcard">
+    <span class="no">01 / 取り込み</span>
+    <h3>登録はスクショだけ。</h3>
+    <p>家計簿アプリや証券会社の「保有商品一覧」のスクリーンショットから、銘柄名と評価額を自動で読み取り。毎月の更新も取り込み直すだけ。<span class="note">※読み取りは完璧ではありません。登録前に確認・修正できます。</span></p>
+    <div class="shot"><img src="./img/feature-import.png" alt="スクショ取り込み画面"></div>
+  </div>
 
-<h2>関連ページ</h2>
-<p><a href="./privacy.html">プライバシーポリシー</a></p>
+  <div class="fcard">
+    <span class="no">02 / 見える化</span>
+    <h3>“本当の資産配分”がわかる。</h3>
+    <p>バランス型や全世界株式など、投資信託の中身まで分解して集計。口座をまたいだ同一銘柄は自動で合算され、資産全体のアセットアロケーションがひと目でわかる。</p>
+    <div class="shot"><img src="./img/feature-allocation.png" alt="資産配分画面"></div>
+  </div>
 
-<footer>本アプリの分析・シミュレーションは一般的な計算にもとづく参考情報であり、投資助言ではありません。投資判断はご自身の責任で行ってください。</footer>
-</div>
+  <div class="fcard">
+    <span class="no">03 / 分析</span>
+    <h3>目標とのズレも、将来も。</h3>
+    <p>目標配分とのズレ、リバランスの試算、将来の資産推移の予測まで。データはすべて端末の中だけ。外部に送信されることはない。</p>
+    <div class="shot"><img src="./img/feature-analysis.png" alt="分析画面"></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>よくある質問</h2>
+  <details><summary>データはどこに保存されますか?</summary><p>すべてお使いの端末の中にのみ保存されます。ログインや口座連携は不要で、入力内容やスクリーンショットが外部に送信されることはありません。</p></details>
+  <details><summary>スクリーンショットがうまく読み取れません。</summary><p>読み取りは完璧ではなく、画像によっては読み取れない・誤って読み取ることがあります。取り込み画面で内容を確認・修正のうえ登録してください。読み取れなかった商品は、検索または手動追加でも登録できます。</p></details>
+  <details><summary>機種変更時にデータを引き継げますか?</summary><p>入力タブの「バックアップ書き出し」でJSONファイルとして保存し、新しい端末の「復元」から読み込んでください。</p></details>
+  <details><summary>無料で使えますか?</summary><p>すべての機能を無料で使えます(登録は10銘柄まで)。買い切りのProにアップグレードすると、銘柄数の上限がなくなります。</p></details>
+  <details><summary>購入したProを復元したい。</summary><p>Proの案内画面にある「購入を復元する」をタップしてください。同じApple IDであれば引き継がれます。</p></details>
+</section>
+
+<footer>
+  <div class="links">
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="mailto:ipmatching@gmail.com">お問い合わせ</a>
+    <a href="../">つくったアプリ一覧</a>
+  </div>
+  <p>本アプリの分析・シミュレーションは一般的な計算にもとづく参考情報であり、投資助言ではありません。投資判断はご自身の責任で行ってください。</p>
+  <p>© 2026 アセロケ</p>
+</footer>
+
 </body>
 </html>
