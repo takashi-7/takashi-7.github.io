@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>つくったアプリ | 個人開発ポートフォリオ</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="日常を少しよくできるよう、試行錯誤しながらつくっている個人開発のiPhoneアプリ一覧。">
+  <title>つくったアプリ | Independent Projects</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a href="./">Apps</a><span class="sub">個人開発アプリのポートフォリオ</span></header>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-label" href="./" aria-label="つくったアプリのトップへ">
+        APPS / INDEPENDENT PROJECTS
+      </a>
+      <p>日常を少しよくできるよう、試行錯誤しながらアプリをつくっています。</p>
+    </header>
 
-<h1>つくったアプリ</h1>
-<p class="lead">iPhone向けのアプリを個人で開発しています。</p>
+    <main>
+      <h1 class="visually-hidden">つくったアプリ</h1>
+      <div class="app-gallery">
+        <a class="app-panel app-panel--future" href="./future-savings/">
+          <div class="app-copy">
+            <div class="app-heading">
+              <img class="app-icon" src="./future-savings/img/icon.png" alt="">
+              <div>
+                <span class="app-number">01 / HABIT</span>
+                <h2>未来貯金</h2>
+              </div>
+            </div>
+            <p class="app-tagline">行動を、<br>未来のお金に変える。</p>
+            <p class="app-description">今日の小さな行動を未来のお金として積み上げ、自分自身に使える時間も意識できる習慣アプリ。</p>
+            <span class="app-link">詳しく見る <span aria-hidden="true">→</span></span>
+            <span class="app-status">iOS ・ 近日リリース予定</span>
+          </div>
+          <figure class="app-visual app-visual--future">
+            <img src="./future-savings/img/today.png" alt="未来貯金の今日画面">
+          </figure>
+        </a>
 
-<a class="appcard card appcard-future" href="./future-savings/">
-  <img class="icon" src="./future-savings/img/icon.png" alt="未来貯金のアイコン">
-  <div>
-    <h2>未来貯金</h2>
-    <p>今日の小さな行動を未来のお金として積み上げ、自分自身に使える時間も意識できる習慣アプリ。記録と設定はすべて端末内に保存されます。</p>
-    <span class="badge">iOS ・ 近日リリース予定</span>
+        <a class="app-panel app-panel--assetscope" href="./assetscope/">
+          <div class="app-copy">
+            <div class="app-heading">
+              <img class="app-icon" src="./assetscope/img/icon.png" alt="">
+              <div>
+                <span class="app-number">02 / ASSET</span>
+                <h2>アセロケ</h2>
+              </div>
+            </div>
+            <p class="app-tagline">投資をまとめて、<br>本当の配分を見る。</p>
+            <p class="app-description">複数口座に散らばった投資信託・株式をまとめて、資産全体の配分をひと目で確認できる資産管理アプリ。</p>
+            <span class="app-link">詳しく見る <span aria-hidden="true">→</span></span>
+            <span class="app-status">iOS ・ 近日リリース予定</span>
+          </div>
+          <figure class="app-visual app-visual--assetscope">
+            <img src="./assetscope/img/hero-light.png" alt="アセロケのポートフォリオ画面">
+          </figure>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>日々の選択が、未来をつくる。<br>シンプルに続けられる体験を、丁寧に設計しています。</p>
+      <div>
+        <a href="mailto:ipmatching@gmail.com">ipmatching@gmail.com</a>
+        <span>© 2026</span>
+      </div>
+    </footer>
   </div>
-</a>
-
-<a class="appcard card" href="./assetscope/">
-  <img class="icon" src="./assetscope/img/icon.png" alt="アセロケのアイコン">
-  <div>
-    <h2>アセロケ</h2>
-    <p>複数口座に散らばった投資信託・株式をまとめて、"本当の資産配分"を見える化する資産管理アプリ。登録は家計簿アプリのスクショを取り込むだけ。データはすべて端末内のみ。</p>
-    <span class="badge">iOS ・ 近日リリース予定</span>
-  </div>
-</a>
-
-<footer>
-<p>お問い合わせ: <a href="mailto:ipmatching@gmail.com">ipmatching@gmail.com</a></p>
-<p>© 2026</p>
-</footer>
-</div>
 </body>
 </html>
