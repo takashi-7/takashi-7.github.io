@@ -444,3 +444,32 @@ a {
     transition: none;
   }
 }
+
+/* Roots of Babel: lapis glaze and gold over a night sky. */
+.app-panel--roots {
+  background:
+    radial-gradient(ellipse 55% 60% at 75% 55%, rgba(58, 99, 201, .28), transparent 70%),
+    linear-gradient(180deg, #0a0e1a 0%, #07080d 100%);
+  color: #ece2cc;
+}
+
+.app-panel--roots .app-number,
+.app-panel--roots .app-tagline,
+.app-panel--roots .app-link,
+.app-panel--roots .app-status {
+  color: #d9ab4f;
+}
+
+.app-panel--roots .app-description {
+  color: #a99d86;
+}
+
+.app-panel--roots .app-heading h2 {
+  word-break: keep-all;
+}
+
+.app-visual--roots img {
+  border: 1px solid rgba(217, 171, 79, .4);
+  border-radius: 42px;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, .6);
+}
