@@ -229,14 +229,15 @@ a {
   bottom: 18px;
 }
 
-.app-panel:last-child:nth-child(odd) {
+.app-panel--wide {
   grid-column: 1 / -1;
   min-height: 720px;
 }
 
-.app-panel:last-child:nth-child(odd) .app-visual {
-  right: 8%;
-  width: min(34%, 390px);
+.app-panel--wide .app-visual {
+  right: 10%;
+  /* A whole phone screen within the panel's height. */
+  width: min(26%, 300px);
 }
 
 .site-footer {
@@ -301,7 +302,7 @@ a {
   }
 
   .app-panel,
-  .app-panel:last-child:nth-child(odd) {
+  .app-panel--wide {
     min-height: 780px;
   }
 
@@ -314,7 +315,7 @@ a {
   }
 
   .app-visual,
-  .app-panel:last-child:nth-child(odd) .app-visual {
+  .app-panel--wide .app-visual {
     right: 28px;
     width: min(42%, 330px);
   }
@@ -348,7 +349,7 @@ a {
   }
 
   .app-panel,
-  .app-panel:last-child:nth-child(odd) {
+  .app-panel--wide {
     display: block;
     min-height: auto;
     padding: 26px 22px 0;
@@ -395,7 +396,7 @@ a {
   }
 
   .app-visual,
-  .app-panel:last-child:nth-child(odd) .app-visual {
+  .app-panel--wide .app-visual {
     position: static;
     width: min(88%, 330px);
     margin: 34px auto 28px;
@@ -428,7 +429,7 @@ a {
   }
 
   .app-panel,
-  .app-panel:last-child:nth-child(odd) {
+  .app-panel--wide {
     padding-right: 18px;
     padding-left: 18px;
   }
@@ -445,31 +446,55 @@ a {
   }
 }
 
-/* Roots of Babel: lapis glaze and gold over a night sky. */
+/* Roots of Babel: the colours of its own page (roots-of-babel/style.css),
+   lapis glow and gold over the night. */
 .app-panel--roots {
   background:
-    radial-gradient(ellipse 55% 60% at 75% 55%, rgba(58, 99, 201, .28), transparent 70%),
-    linear-gradient(180deg, #0a0e1a 0%, #07080d 100%);
+    radial-gradient(ellipse 60% 55% at 72% 45%, rgba(58, 99, 201, .22), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 30%, rgba(217, 171, 79, .10), transparent 70%),
+    #07080d;
   color: #ece2cc;
 }
 
-.app-panel--roots .app-number,
-.app-panel--roots .app-tagline,
-.app-panel--roots .app-link,
-.app-panel--roots .app-status {
+.app-panel--roots .app-icon {
+  border-color: rgba(217, 171, 79, .28);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .5);
+}
+
+.app-panel--roots .app-number {
+  color: #b98d3c;
+  letter-spacing: .18em;
+}
+
+.app-panel--roots .app-heading h2 {
   color: #d9ab4f;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  letter-spacing: .04em;
+  /* Breaks only at the dots of the name. */
+  word-break: keep-all;
+}
+
+.app-panel--roots .app-tagline {
+  color: #ece2cc;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .app-panel--roots .app-description {
   color: #a99d86;
 }
 
-.app-panel--roots .app-heading h2 {
-  word-break: keep-all;
+.app-panel--roots .app-link {
+  color: #d9ab4f;
+}
+
+.app-panel--roots .app-status {
+  color: #c9a36b;
 }
 
 .app-visual--roots img {
-  border: 1px solid rgba(217, 171, 79, .4);
-  border-radius: 42px;
-  box-shadow: 0 32px 64px rgba(0, 0, 0, .6);
+  border: 1px solid rgba(217, 171, 79, .35);
+  border-radius: 34px;
+  box-shadow: 0 34px 70px rgba(0, 0, 0, .65);
 }
